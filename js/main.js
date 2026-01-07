@@ -88,7 +88,33 @@ function initMusicPlayer() {
     const bgMusic = document.getElementById('bg-music');
 
     // Set volume
-    bgMusic.volume = 0.3;
+    bgMusic.volume = 0.4;
+
+    // Handle music load error
+    bgMusic.addEventListener('error', (e) => {
+        console.log('Music failed to load, trying next source...');
+        // Try next source if available
+        const sources = bgMusic.querySelectorAll('source');
+        let currentIndex = 0;
+        sources.forEach((source, index) => {
+            if (source.src === bgMusic.currentSrc) {
+                currentIndex = index;
+            }
+        });
+
+        if (currentIndex < sources.length - 1) {
+            bgMusic.src = sources[currentIndex + 1].src;
+            bgMusic.load();
+        } else {
+            musicIcon.textContent = '❌';
+            console.log('All music sources failed');
+        }
+    });
+
+    // Handle successful load
+    bgMusic.addEventListener('canplaythrough', () => {
+        console.log('Music loaded successfully!');
+    });
 
     musicToggle.addEventListener('click', () => {
         if (isMusicPlaying) {
@@ -96,11 +122,20 @@ function initMusicPlayer() {
             musicIcon.textContent = '🔇';
             isMusicPlaying = false;
         } else {
-            bgMusic.play().catch(e => {
-                console.log('Music autoplay blocked, user interaction needed');
-            });
-            musicIcon.textContent = '🎵';
-            isMusicPlaying = true;
+            // Show loading state
+            musicIcon.textContent = '⏳';
+
+            bgMusic.play()
+                .then(() => {
+                    musicIcon.textContent = '🎵';
+                    isMusicPlaying = true;
+                })
+                .catch(e => {
+                    console.log('Music autoplay blocked:', e);
+                    musicIcon.textContent = '🔇';
+                    // Alert user
+                    alert('Klik sekali lagi untuk memutar musik 💕');
+                });
         }
     });
 }
@@ -110,11 +145,17 @@ function playMusic() {
     const musicIcon = document.getElementById('music-icon');
 
     if (!isMusicPlaying) {
-        bgMusic.play().catch(e => {
-            console.log('Music autoplay blocked');
-        });
-        musicIcon.textContent = '🎵';
-        isMusicPlaying = true;
+        musicIcon.textContent = '⏳';
+
+        bgMusic.play()
+            .then(() => {
+                musicIcon.textContent = '🎵';
+                isMusicPlaying = true;
+            })
+            .catch(e => {
+                console.log('Music autoplay blocked:', e);
+                musicIcon.textContent = '🔇';
+            });
     }
 }
 
