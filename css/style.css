@@ -1,0 +1,206 @@
+/* Custom Styles for Apology Website */
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #FFF5F7;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #F8BBD9;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #C97B8B;
+}
+
+/* Floating hearts */
+.floating-heart {
+    position: absolute;
+    font-size: 1.5rem;
+    opacity: 0.3;
+    animation: floatHeart 15s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes floatHeart {
+    0% {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.3;
+    }
+    90% {
+        opacity: 0.3;
+    }
+    100% {
+        transform: translateY(-100px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Gallery card stagger animation on scroll */
+.gallery-card {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.gallery-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Modal open state */
+#modal.open,
+#cta-modal.open,
+#thank-modal.open {
+    display: flex;
+}
+
+#modal.open #modal-content,
+#cta-modal.open #cta-modal-content,
+#thank-modal.open #thank-modal-content {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Dots indicator */
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #E8D5E7;
+    transition: all 0.3s ease;
+}
+
+.dot.active {
+    background: #C97B8B;
+    transform: scale(1.2);
+}
+
+/* Button ripple effect */
+.ripple {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+    transform: scale(0);
+    animation: rippleEffect 0.6s ease-out;
+    pointer-events: none;
+}
+
+@keyframes rippleEffect {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+/* Confetti particles */
+.confetti-piece {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    background: #F8BBD9;
+    animation: confettiFall 3s ease-in-out forwards;
+    pointer-events: none;
+    z-index: 100;
+}
+
+@keyframes confettiFall {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+/* Section animations on scroll */
+.section-animate {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.section-animate.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Heart pulse on love button */
+#love-button:hover .animate-pulse {
+    animation: heartBeat 0.5s ease-in-out infinite;
+}
+
+@keyframes heartBeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.3);
+    }
+}
+
+/* Mobile optimizations */
+@media (max-width: 640px) {
+    .font-playfair {
+        letter-spacing: -0.01em;
+    }
+
+    #modal-content {
+        max-height: 85vh;
+    }
+
+    #modal-prev span,
+    #modal-next span {
+        display: none;
+    }
+}
+
+/* Tablet optimizations */
+@media (min-width: 641px) and (max-width: 1024px) {
+    #gallery .grid {
+        gap: 1.5rem;
+    }
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .floating-heart {
+        display: none;
+    }
+}
+
+/* Focus states for accessibility */
+button:focus-visible,
+a:focus-visible {
+    outline: 2px solid #C97B8B;
+    outline-offset: 2px;
+}
+
+/* Selection color */
+::selection {
+    background: #F8BBD9;
+    color: #C97B8B;
+}

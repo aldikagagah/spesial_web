@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maaf Ya, yang. 💕</title>
+    <meta
+      name="description"
+      content="Website ucapan maaf yang tulus dari hati untuk kamu yang paling berharga"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- TailwindCSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'primary-pink': '#F8BBD9',
+              'soft-rose': '#FFDEE9',
+              'cream-white': '#FFF5F7',
+              'lavender-mist': '#E8D5E7',
+              'dusty-purple': '#B794A4',
+              'deep-rose': '#C97B8B',
+              'warm-blush': '#FFE4EC',
+            },
+            fontFamily: {
+              outfit: ['Outfit', 'sans-serif'],
+              playfair: ['Playfair Display', 'serif'],
+            },
+            animation: {
+              float: 'float 6s ease-in-out infinite',
+              'float-delayed': 'float 6s ease-in-out 2s infinite',
+              'pulse-soft': 'pulse-soft 2s ease-in-out infinite',
+              'fade-in-up': 'fade-in-up 0.8s ease-out forwards',
+              'scale-in': 'scale-in 0.3s ease-out forwards',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
+                '50%': { transform: 'translateY(-20px) rotate(5deg)' },
+              },
+              'pulse-soft': {
+                '0%, 100%': { boxShadow: '0 0 20px rgba(248, 187, 217, 0.4)' },
+                '50%': { boxShadow: '0 0 40px rgba(248, 187, 217, 0.8)' },
+              },
+              'fade-in-up': {
+                '0%': { opacity: '0', transform: 'translateY(30px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              'scale-in': {
+                '0%': { opacity: '0', transform: 'scale(0.9)' },
+                '100%': { opacity: '1', transform: 'scale(1)' },
+              },
+            },
+          },
+        },
+      }
+    </script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="bg-cream-white font-outfit text-deep-rose overflow-x-hidden">
+    <!-- Floating Hearts Background -->
+    <div id="floating-hearts" class="fixed inset-0 pointer-events-none z-0 overflow-hidden"></div>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative min-h-screen flex items-center justify-center px-4 py-20">
+      <div class="text-center z-10 max-w-3xl mx-auto">
+        <!-- Decorative Element -->
+        <div class="mb-6 opacity-0 animate-fade-in-up" style="animation-delay: 0.1s">
+          <span class="text-5xl">🌸</span>
+        </div>
+
+        <!-- Main Title -->
+        <h1
+          class="font-playfair text-4xl md:text-6xl lg:text-7xl font-semibold mb-6 opacity-0 animate-fade-in-up leading-tight"
+          style="animation-delay: 0.3s"
+        >
+          Maafin Aku Ya...
+        </h1>
+
+        <!-- Subtitle -->
+        <p
+          class="text-lg md:text-xl lg:text-2xl text-dusty-purple mb-4 opacity-0 animate-fade-in-up max-w-xl mx-auto"
+          style="animation-delay: 0.5s"
+        >
+          Aku tahu aku salah, dan yang paling penting adalah aku nggak mau kehilangan kamu
+        </p>
+
+        <!-- Tagline -->
+        <p
+          class="font-playfair italic text-xl md:text-2xl text-primary-pink mb-10 opacity-0 animate-fade-in-up"
+          style="animation-delay: 0.7s"
+        >
+          "Aku yang salah, kamu yang berharga"
+        </p>
+
+        <!-- CTA Button -->
+        <button
+          id="cta-button"
+          class="group relative px-8 py-4 bg-gradient-to-r from-primary-pink to-soft-rose text-white font-semibold text-lg rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 animate-pulse-soft opacity-0 animate-fade-in-up"
+          style="animation-delay: 0.9s"
+        >
+          <span class="relative z-10 flex items-center gap-2">
+            <span>💗</span>
+            <span>Klik untuk Maafin Aku</span>
+          </span>
+          <div
+            class="absolute inset-0 bg-gradient-to-r from-soft-rose to-primary-pink rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          ></div>
+        </button>
+
+        <!-- Scroll Indicator -->
+        <div class="mt-16 opacity-0 animate-fade-in-up" style="animation-delay: 1.2s">
+          <div class="flex flex-col items-center text-dusty-purple">
+            <span class="text-sm mb-2">Scroll untuk lihat lebih</span>
+            <div class="w-6 h-10 border-2 border-dusty-purple rounded-full flex justify-center">
+              <div class="w-1.5 h-3 bg-dusty-purple rounded-full mt-2 animate-bounce"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section
+      id="gallery"
+      class="relative py-20 px-4 bg-gradient-to-b from-cream-white via-warm-blush to-cream-white"
+    >
+      <div class="max-w-6xl mx-auto">
+        <!-- Section Header -->
+        <div class="text-center mb-16">
+          <span class="text-4xl mb-4 block">📸</span>
+          <h2 class="font-playfair text-3xl md:text-4xl lg:text-5xl font-semibold mb-4">
+            Setiap Gambar, Satu Maaf Untukmu
+          </h2>
+          <p class="text-dusty-purple text-lg max-w-xl mx-auto">
+            Klik gambar untuk membaca pesan maaf yang sudah aku siapkan khusus untukmu
+          </p>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Card 1 -->
+          <div class="gallery-card group cursor-pointer" data-index="0">
+            <div
+              class="relative overflow-hidden rounded-2xl bg-white shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2"
+            >
+              <div
+                class="aspect-square bg-gradient-to-br from-soft-rose to-lavender-mist flex items-center justify-center"
+              >
+                <span class="text-6xl group-hover:scale-110 transition-transform duration-300"
+                  >🌸</span
+                >
+              </div>
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-deep-rose/80 via-deep-rose/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4"
+              >
+                <p class="text-white text-sm font-medium">Pesan Tulus #1</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="gallery-card group cursor-pointer" data-index="1">
+            <div
+              class="relative overflow-hidden rounded-2xl bg-white shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2"
+            >
+              <div
+                class="aspect-square bg-gradient-to-br from-primary-pink to-soft-rose flex items-center justify-center"
+              >
+                <span class="text-6xl group-hover:scale-110 transition-transform duration-300"
+                  >🎀</span
+                >
+              </div>
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-deep-rose/80 via-deep-rose/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4"
+              >
+                <p class="text-white text-sm font-medium">Pesan Lucu #2</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="gallery-card group cursor-pointer" data-index="2">
+            <div
+              class="relative overflow-hidden rounded-2xl bg-white shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2"
+            >
+              <div
+                class="aspect-square bg-gradient-to-br from-lavender-mist to-primary-pink flex items-center justify-center"
+              >
+                <span class="text-6xl group-hover:scale-110 transition-transform duration-300"
+                  >🌷</span
+                >
+              </div>
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-deep-rose/80 via-deep-rose/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4"
+              >
+                <p class="text-white text-sm font-medium">Pesan Manis #3</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="gallery-card group cursor-pointer" data-index="3">
+            <div
+              class="relative overflow-hidden rounded-2xl bg-white shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2"
+            >
+              <div
+                class="aspect-square bg-gradient-to-br from-warm-blush to-soft-rose flex items-center justify-center"
+              >
+                <span class="text-6xl group-hover:scale-110 transition-transform duration-300"
+                  >💫</span
+                >
+              </div>
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-deep-rose/80 via-deep-rose/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4"
+              >
+                <p class="text-white text-sm font-medium">Pesan Tulus #4</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="gallery-card group cursor-pointer" data-index="4">
+            <div
+              class="relative overflow-hidden rounded-2xl bg-white shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2"
+            >
+              <div
+                class="aspect-square bg-gradient-to-br from-soft-rose to-warm-blush flex items-center justify-center"
+              >
+                <span class="text-6xl group-hover:scale-110 transition-transform duration-300"
+                  >🎠</span
+                >
+              </div>
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-deep-rose/80 via-deep-rose/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4"
+              >
+                <p class="text-white text-sm font-medium">Pesan Lucu #5</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="gallery-card group cursor-pointer" data-index="5">
+            <div
+              class="relative overflow-hidden rounded-2xl bg-white shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2"
+            >
+              <div
+                class="aspect-square bg-gradient-to-br from-lavender-mist to-warm-blush flex items-center justify-center"
+              >
+                <span class="text-6xl group-hover:scale-110 transition-transform duration-300"
+                  >🍃</span
+                >
+              </div>
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-deep-rose/80 via-deep-rose/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4"
+              >
+                <p class="text-white text-sm font-medium">Pesan Manis #6</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 7 -->
+          <div class="gallery-card group cursor-pointer" data-index="6">
+            <div
+              class="relative overflow-hidden rounded-2xl bg-white shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2"
+            >
+              <div
+                class="aspect-square bg-gradient-to-br from-primary-pink to-lavender-mist flex items-center justify-center"
+              >
+                <span class="text-6xl group-hover:scale-110 transition-transform duration-300"
+                  >🦋</span
+                >
+              </div>
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-deep-rose/80 via-deep-rose/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4"
+              >
+                <p class="text-white text-sm font-medium">Pesan Tulus #7</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 8 -->
+          <div class="gallery-card group cursor-pointer" data-index="7">
+            <div
+              class="relative overflow-hidden rounded-2xl bg-white shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2"
+            >
+              <div
+                class="aspect-square bg-gradient-to-br from-soft-rose to-primary-pink flex items-center justify-center"
+              >
+                <span class="text-6xl group-hover:scale-110 transition-transform duration-300"
+                  >🌙</span
+                >
+              </div>
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-deep-rose/80 via-deep-rose/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4"
+              >
+                <p class="text-white text-sm font-medium">Pesan Manis #8</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final Message Section -->
+    <section
+      id="final-message"
+      class="relative py-24 px-4 bg-gradient-to-b from-cream-white to-soft-rose/30"
+    >
+      <div class="max-w-3xl mx-auto text-center">
+        <!-- Quote -->
+        <div class="mb-8">
+          <span class="text-5xl">💌</span>
+        </div>
+
+        <blockquote
+          class="font-playfair text-3xl md:text-4xl lg:text-5xl font-semibold italic mb-8 leading-relaxed"
+        >
+          "Aku yang salah, kamu yang berharga"
+        </blockquote>
+
+        <p class="text-lg md:text-xl text-dusty-purple mb-12 max-w-xl mx-auto leading-relaxed">
+          Aku nggak bisa janji untuk selalu sempurna, tapi aku janji untuk selalu berusaha jadi yang
+          terbaik untukmu. Maafin aku ya, sayang...
+        </p>
+
+        <!-- Final CTA -->
+        <button
+          id="love-button"
+          class="group relative px-10 py-5 bg-gradient-to-r from-deep-rose to-primary-pink text-white font-semibold text-xl rounded-full shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
+        >
+          <span class="relative z-10 flex items-center gap-3">
+            <span class="text-2xl animate-pulse">❤️</span>
+            <span>Aku Sayang Kamu</span>
+            <span class="text-2xl animate-pulse">❤️</span>
+          </span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 px-4 bg-warm-blush/50 text-center">
+      <p class="text-dusty-purple flex items-center justify-center gap-2 flex-wrap">
+        <span>Made with</span>
+        <span class="text-xl animate-pulse">💕</span>
+        <span>untuk kamu yang paling spesial</span>
+      </p>
+      <p class="text-sm text-dusty-purple/70 mt-2">2026 • Dengan sepenuh hati</p>
+    </footer>
+
+    <!-- Modal -->
+    <div id="modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4">
+      <!-- Backdrop -->
+      <div id="modal-backdrop" class="absolute inset-0 bg-deep-rose/40 backdrop-blur-sm"></div>
+
+      <!-- Modal Content -->
+      <div
+        id="modal-content"
+        class="relative bg-white rounded-3xl shadow-2xl max-w-lg w-full max-h-[90vh] overflow-hidden transform scale-95 opacity-0 transition-all duration-300"
+      >
+        <!-- Close Button -->
+        <button
+          id="modal-close"
+          class="absolute top-4 right-4 z-10 w-10 h-10 bg-white/80 backdrop-blur rounded-full flex items-center justify-center text-deep-rose hover:bg-white hover:scale-110 transition-all duration-200 shadow-lg"
+        >
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+
+        <!-- Modal Image -->
+        <div
+          id="modal-image"
+          class="aspect-square bg-gradient-to-br from-soft-rose to-lavender-mist flex items-center justify-center"
+        >
+          <span id="modal-emoji" class="text-8xl"></span>
+        </div>
+
+        <!-- Modal Message -->
+        <div class="p-6 md:p-8">
+          <p
+            id="modal-message"
+            class="font-playfair text-xl md:text-2xl text-deep-rose text-center leading-relaxed"
+          ></p>
+        </div>
+
+        <!-- Navigation -->
+        <div class="flex items-center justify-between px-6 pb-6">
+          <button
+            id="modal-prev"
+            class="flex items-center gap-2 px-4 py-2 text-dusty-purple hover:text-deep-rose transition-colors"
+          >
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M15 19l-7-7 7-7"
+              />
+            </svg>
+            <span>Sebelumnya</span>
+          </button>
+
+          <!-- Dots Indicator -->
+          <div id="modal-dots" class="flex gap-2"></div>
+
+          <button
+            id="modal-next"
+            class="flex items-center gap-2 px-4 py-2 text-dusty-purple hover:text-deep-rose transition-colors"
+          >
+            <span>Selanjutnya</span>
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA Modal (Initial) -->
+    <div id="cta-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4">
+      <!-- Backdrop -->
+      <div id="cta-modal-backdrop" class="absolute inset-0 bg-deep-rose/40 backdrop-blur-sm"></div>
+
+      <!-- Modal Content -->
+      <div
+        id="cta-modal-content"
+        class="relative bg-white rounded-3xl shadow-2xl max-w-md w-full overflow-hidden transform scale-95 opacity-0 transition-all duration-300 text-center p-8 md:p-12"
+      >
+        <!-- Close Button -->
+        <button
+          id="cta-modal-close"
+          class="absolute top-4 right-4 w-10 h-10 bg-warm-blush rounded-full flex items-center justify-center text-deep-rose hover:bg-primary-pink hover:text-white transition-all duration-200"
+        >
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+
+        <!-- Content -->
+        <div class="text-6xl mb-6">🥺💕</div>
+        <h3 class="font-playfair text-2xl md:text-3xl font-semibold text-deep-rose mb-4">
+          Terima Kasih...
+        </h3>
+        <p class="text-dusty-purple text-lg leading-relaxed mb-6">
+          Terima kasih sudah mau buka website ini. Aku tahu aku salah, dan aku minta maaf dari lubuk
+          hati yang paling dalam. Kamu adalah hal terbaik yang pernah terjadi di hidupku.
+        </p>
+        <p class="font-playfair italic text-primary-pink text-xl">
+          Scroll ke bawah untuk lihat semua pesan maafku ya... 💗
+        </p>
+      </div>
+    </div>
+
+    <!-- Thank You Modal -->
+    <div id="thank-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4">
+      <!-- Backdrop -->
+      <div
+        id="thank-modal-backdrop"
+        class="absolute inset-0 bg-deep-rose/40 backdrop-blur-sm"
+      ></div>
+
+      <!-- Modal Content -->
+      <div
+        id="thank-modal-content"
+        class="relative bg-white rounded-3xl shadow-2xl max-w-md w-full overflow-hidden transform scale-95 opacity-0 transition-all duration-300 text-center p-8 md:p-12"
+      >
+        <!-- Close Button -->
+        <button
+          id="thank-modal-close"
+          class="absolute top-4 right-4 w-10 h-10 bg-warm-blush rounded-full flex items-center justify-center text-deep-rose hover:bg-primary-pink hover:text-white transition-all duration-200"
+        >
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+
+        <!-- Content -->
+        <div class="text-7xl mb-6">💖</div>
+        <h3 class="font-playfair text-3xl md:text-4xl font-semibold text-deep-rose mb-4">
+          Aku Juga Sayang Kamu!
+        </h3>
+        <p class="text-dusty-purple text-lg leading-relaxed mb-4">
+          Lebih dari apapun di dunia ini...
+        </p>
+        <div class="flex justify-center gap-2 text-3xl">
+          <span class="animate-bounce" style="animation-delay: 0s">💕</span>
+          <span class="animate-bounce" style="animation-delay: 0.1s">💕</span>
+          <span class="animate-bounce" style="animation-delay: 0.2s">💕</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Confetti Canvas -->
+    <canvas id="confetti-canvas" class="fixed inset-0 pointer-events-none z-40"></canvas>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
