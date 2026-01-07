@@ -144,9 +144,20 @@
           <h2 class="font-playfair text-3xl md:text-4xl lg:text-5xl font-semibold mb-4">
             Setiap Gambar, Satu Maaf Untukmu
           </h2>
-          <p class="text-dusty-purple text-lg max-w-xl mx-auto">
-            Klik gambar untuk membaca pesan maaf yang sudah aku siapkan khusus untukmu
+          <p class="text-dusty-purple text-lg max-w-xl mx-auto mb-8">
+            Tekan tombol di bawah untuk membaca semua pesan maafku secara otomatis ✨
           </p>
+
+          <!-- Auto-Play Button -->
+          <button
+            id="autoplay-btn"
+            class="group relative px-8 py-4 bg-gradient-to-r from-primary-pink to-deep-rose text-white font-semibold text-lg rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 animate-pulse-soft"
+          >
+            <span class="relative z-10 flex items-center gap-3">
+              <span id="autoplay-icon">▶️</span>
+              <span id="autoplay-text">Mulai Baca Semua Pesan</span>
+            </span>
+          </button>
         </div>
 
         <!-- Gallery Grid -->
@@ -525,6 +536,26 @@
 
     <!-- Confetti Canvas -->
     <canvas id="confetti-canvas" class="fixed inset-0 pointer-events-none z-40"></canvas>
+
+    <!-- Music Player Floating Button -->
+    <div id="music-player" class="fixed bottom-6 right-6 z-50">
+      <button
+        id="music-toggle"
+        class="w-14 h-14 bg-gradient-to-r from-primary-pink to-deep-rose text-white rounded-full shadow-xl hover:shadow-2xl transform hover:scale-110 transition-all duration-300 flex items-center justify-center"
+        title="Toggle Music"
+      >
+        <span id="music-icon" class="text-2xl">🔇</span>
+      </button>
+      <div class="absolute -top-2 -right-2 w-5 h-5 bg-warm-blush rounded-full flex items-center justify-center">
+        <span class="text-xs">🎵</span>
+      </div>
+    </div>
+
+    <!-- Background Music - Romantic Piano -->
+    <audio id="bg-music" loop preload="auto">
+      <!-- Free romantic piano music -->
+      <source src="https://cdn.pixabay.com/audio/2022/02/15/audio_7391a9b470.mp3" type="audio/mpeg">
+    </audio>
 
     <!-- Scripts -->
     <script src="js/main.js"></script>

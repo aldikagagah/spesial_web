@@ -145,6 +145,77 @@ html {
     animation: heartBeat 0.5s ease-in-out infinite;
 }
 
+/* Progress bar container */
+.progress-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 20;
+    padding: 0;
+}
+
+/* Music player button */
+#music-player button {
+    animation: musicPulse 2s ease-in-out infinite;
+}
+
+@keyframes musicPulse {
+    0%, 100% {
+        box-shadow: 0 4px 15px rgba(248, 187, 217, 0.4);
+    }
+    50% {
+        box-shadow: 0 4px 25px rgba(248, 187, 217, 0.8);
+    }
+}
+
+/* Auto-play button glow */
+#autoplay-btn {
+    position: relative;
+    overflow: hidden;
+}
+
+#autoplay-btn::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        45deg,
+        transparent,
+        rgba(255, 255, 255, 0.1),
+        transparent
+    );
+    transform: rotate(45deg);
+    animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        transform: translateX(-100%) rotate(45deg);
+    }
+    100% {
+        transform: translateX(100%) rotate(45deg);
+    }
+}
+
+/* Modal emoji transition */
+#modal-emoji {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Modal message transition */
+#modal-message {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Card counter badge */
+#card-counter {
+    z-index: 15;
+}
+
 @keyframes heartBeat {
     0%, 100% {
         transform: scale(1);
